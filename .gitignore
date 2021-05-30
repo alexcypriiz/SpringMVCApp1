@@ -1,0 +1,14 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../:\Users\alexp\IdeaProjects\SpringMVCApp1\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Idea config
+.idea
+# Maven output directory
+target
+# Spring app
+SpringMVCApp1.iml
