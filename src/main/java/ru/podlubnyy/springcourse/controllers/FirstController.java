@@ -26,4 +26,21 @@ public class FirstController {
     public String goodByePage() {
         return "first/goodbye";
     }
+
+    @GetMapping("/calculator")
+    public String answer(@RequestParam(value = "a") int a,
+                         @RequestParam(value = "b") int b,
+                         @RequestParam(value = "action") String action,
+                         Model model) {
+        if (action.equals("multiplication")) {
+            model.addAttribute("message","Answer: " + a + " * " + b + " = " + (a * b));
+        } else if (action.equals("addition")) {
+            model.addAttribute("message","Answer: " + a + " + " + b + " = " + (a + b));
+        } else if (action.equals("subtraction")) {
+            model.addAttribute("message","Answer: " + a + " - " + b + " = " + (a - b));
+        } else if (action.equals("division")) {
+            model.addAttribute("message","Answer: " + a + " / " + b + " = " + (a / b));
+        }
+        return "/first/calculator";
+    }
 }
